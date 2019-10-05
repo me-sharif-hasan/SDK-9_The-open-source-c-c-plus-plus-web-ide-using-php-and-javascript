@@ -1,0 +1,8 @@
+Start from here!
+
+#Install gcc minGW compiler in your machine. Download it from here https://osdn.net/projects/mingw/releases/
+#install xampp with latest php version and apache web server . This project has tested using php 7.2.1 on xampp apache
+#put the source files in your root directory . Typically "htdocs" under "xampp" folder of your "XAMPP" installation path
+#Start the apache from your xampp control panel
+#Jump to the browser and type "http://localhost"
+------------------------------That's all--------------
