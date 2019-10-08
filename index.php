@@ -13,6 +13,11 @@
 
 	<link rel="stylesheet" href="assets/style/style.main.css">
 
+        <link rel="shortcut icon" href="assets/img/logo-text.png" />
+        <link rel="apple-touch-icon" href="assets/img/logo-text.png" />
+
+
+
 </head>
 
 <body>
