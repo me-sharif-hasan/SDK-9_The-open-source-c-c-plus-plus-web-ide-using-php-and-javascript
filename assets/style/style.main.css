@@ -1,3 +1,6 @@
+body{
+        margin: 0 auto;
+}
 .ace_editor {
 	width: 50%;
 	height: 300px;
