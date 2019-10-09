@@ -14,5 +14,8 @@
 	<div class="sec c3">
 		<button type="button" onclick="star()">SAVE</button>
 	</div>
+	<div class="sec c4">
+		<button type="button" onClick="toggleFullScreen()">FullScreen</button>
+	</div>
 </div>
 <input type="hidden" name="mode" value="cpp" id="mode">

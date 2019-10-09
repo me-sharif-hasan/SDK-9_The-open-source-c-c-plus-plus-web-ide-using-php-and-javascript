@@ -6,24 +6,38 @@
 	box-sizing: border-box;
 	box-shadow: 0 0 3px #eee;
 }
+#code {
+	background: #eee;
+}
 .container {
 	display: flex;
 }
 .right {
 	width: 50%;
 	padding: 12px 0 0 0;
+	position: relative;
 }
 #input {
-	height: 220px;
 	width: 100%;
 	padding: 2px;
 	box-sizing: border-box;
 	background: black;
 	color: green;
+	position: absolute;
+	top: 13px;
+	height: 45%;
+	border: none;
+}
+#oc {
+	position: absolute;
+	bottom: -21px;
+	height: 55%;
+	width: 100%;
+	overflow: hidden;
 }
 #output {
-	height: 396px;
-	width: 100.2%;
+	height: 104%;
+	width: 102.01%;
 	padding: 10px;
 	box-sizing: border-box;
 	background: black;
@@ -46,7 +60,6 @@
 	font-weight: bold;
 	text-shadow: 0 0 3px;
 }
-
 /*Tool box css*/
 
 .toolbox {

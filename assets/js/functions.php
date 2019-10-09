@@ -138,3 +138,57 @@ editor.getSession().on("change", function () {
 
 		}
 	}
+
+function toggleRight()
+{
+	var elem = $("#hiddenInToggle");
+	var r = $("#coder");
+	var space = $("#source");
+	if(window.screenTop && window.screenY)
+		{
+			//elem.style.display="block";
+			r.width("50%");
+			elem.width("50%");
+			space.height("95%");
+			elem.height("95%");
+		}
+	else
+		{
+			//elem.style.display="none";
+			r.width("60%");
+			elem.width("40%");
+			space.height("115%");
+			elem.height("115%");
+		}
+		
+}
+
+$("#code")[0].addEventListener("fullscreenchange",function(){toggleRight()});
+				 
+function toggleFullScreen() {
+    var elem = $("#code")[0];
+	
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
