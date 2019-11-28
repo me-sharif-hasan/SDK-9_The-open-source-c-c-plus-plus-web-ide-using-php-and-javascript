@@ -17,3 +17,5 @@
 5.  Add bin folder of your MinGW installation directory to the system path. See instruction about how to install MinGW GCC from [here](http://www.mingw.org/wiki/Getting_Started).
 6.  You are ready to go. Jump to the xampp control panel and start **apache **. Then go to a browser and type http://localhost .****
 ### This project is using ACE code editor for code editing feature . Thanks ACE team .
+
+Authors blog: https://iishanto.me
