@@ -19,6 +19,7 @@
 ### This project is using ACE code editor for code editing feature . Thanks ACE team .
 
 Authors blog: https://iishanto.me
+<<<<<<< HEAD
 
 
 ### Version log:
@@ -26,3 +27,5 @@ Authors blog: https://iishanto.me
 	 1. Fixed toolbar.
 	 2. User friendly interface.
 	 3.Copy to clipboard feature.
+=======
+>>>>>>> c3b3563a447d70c68004ad23b337aafa21c99c65
