@@ -1,4 +1,3 @@
-<xmp>
 <?php
 include("time.php");
 ini_set("display_errors", 1);
@@ -48,17 +47,19 @@ function my_shell_exec($cmd, &$stdout=null, &$stderr=null) {
 }
 
 $e = my_shell_exec('g++ -g -o '.$name.' '.$source.'>error.log');
-
+$flag = 0;
+$error="";
 if($e[0])
 {
-	echo str_replace($source.":", "================================\n", $e[0]);
-	echo("___________________________\n".date('M:d:Y H:i:s',time()));
-	exit(file_get_contents("php://stderr"));
+	$error =str_replace($source.":", "================================\n", $e[0]);
+	//echo("___________________________\n".date('M:d:Y H:i:s',time()));
+	$f=1;
 }
-
-
-
 $ts = microtime(true);
+$te=0;
+$responseData = "";
+
+if(!$flag){
 $exe = __DIR__."\\".$name;
 $in = __DIR__."\\".$inputs;
 $out = __DIR__."\\".$out;
@@ -66,13 +67,17 @@ $out = __DIR__."\\".$out;
 exec("$exe < $in",$o,$e);
 //var_dump($e);
 $te= microtime(true);
-
 foreach ($o as $value) {
-	echo($value);
-	echo "\n";
+	$responseData.="$value\n";
 }
+}
+$timeEnd = $te;
 
-
-echo "\n================================\nExecution time: ".number_format((float)($te-$ts)+.01, 2, '.', '')." Seconds\n";
+if($error!=NULL){
+    $responseData = $error;
+    $timeEnd = microtime(true);
+}
+$execution = "\n================================\nExecution time: ".number_format((float)($timeEnd-$ts)+.01, 2, '.', '')." Seconds\n";
+$output = json_encode(array("result"=>$responseData,"time"=>$execution));
+echo $output;
 ?>
-</xmp>

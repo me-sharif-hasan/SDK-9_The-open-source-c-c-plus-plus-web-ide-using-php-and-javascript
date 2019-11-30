@@ -23,22 +23,34 @@ function submitF() {
 
 	var form = $("#code");
 	var url = form.attr('action');
-	var out = $("#output");
+	var out = $("#outputXMP");
+	var cpy = $("#copyContext");
 	$("#loader")[0].style.display = "block";
 	$.ajax({
 		type: "POST",
 		url: "process.php",
 		data: form.serialize(), // serializes the form's elements.
 		success: function (data) {
+			var json = JSON.parse(data);
 			$("#loader")[0].style.display = "none";
-			out.html(data);
+			out.text(json.result+"\n"+json.time);
+			cpy.text(json.result);
 		}
 	});
 
 	return false;
 }
 
-
+function copyOut(){
+	var doc = $("#copyContext")[0];
+	
+	var $temp = $("<textarea>");
+  	$("body").append($temp);
+  	$temp.val($(doc).text()).select();
+  	document.execCommand("copy");
+  	$temp.remove();
+  	console.log("Copied!");
+}
 
 
 editor.setTheme("ace/theme/textmate");

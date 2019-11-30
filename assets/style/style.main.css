@@ -14,6 +14,7 @@ body{
 }
 .container {
 	display: flex;
+	margin-top: 10px;
 }
 .right {
 	width: 50%;
@@ -31,6 +32,9 @@ body{
 	height: 45%;
 	border: none;
 }
+#copyContext{
+        display:none;
+}
 #oc {
 	position: absolute;
 	bottom: -21px;
@@ -40,7 +44,7 @@ body{
 }
 #output {
 	height: 104%;
-	width: 102.01%;
+	width: 100.01%;
 	padding: 10px;
 	box-sizing: border-box;
 	background: black;
@@ -67,6 +71,11 @@ body{
 
 .toolbox {
 	display: flex;
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        background: #eee;
+	top: 0;
 }
 .toolbox div {
 	margin: 0 15px 0 0;

@@ -37,7 +37,8 @@
 				<div id="oc">
 					<span style="position: absolute;left: 37%;top: 30%;display: none;color: white;" id="loader"><img style="height: 160px;" src="assets/img/loader.gif" alt="Loading"></span>
 					<div id="output">
-
+							<xmp id="outputXMP">
+							</xmp>
 					</div>
 				</div>
 			</div>

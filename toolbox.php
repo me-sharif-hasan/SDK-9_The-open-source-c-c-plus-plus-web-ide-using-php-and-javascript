@@ -17,5 +17,10 @@
 	<div class="sec c4">
 		<button type="button" onClick="toggleFullScreen()">FullScreen</button>
 	</div>
+	<div class="sec c5">
+		<button type="button" onClick="copyOut()">CopyOutput</button>
+	</div>
+
 </div>
 <input type="hidden" name="mode" value="cpp" id="mode">
+<div id="copyContext"></div>
