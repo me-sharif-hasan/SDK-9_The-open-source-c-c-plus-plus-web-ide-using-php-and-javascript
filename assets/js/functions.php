@@ -17,7 +17,9 @@ var init_cpp = '/*\nSharif Hasan - CSE, PUST\n<?php echo date('M d, Y h: i A ',t
 
 
 
-
+window.onbeforeunload = function() {
+        return "Dude, are you sure you want to leave? Think of the kittens!";
+   }
 
 function submitF() {
 

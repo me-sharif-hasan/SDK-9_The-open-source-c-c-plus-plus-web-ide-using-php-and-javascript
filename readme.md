@@ -1,5 +1,5 @@
 ### Screenshot
-![screenshot](https://raw.githubusercontent.com/me-sharif-hasan/SDK-9_The-open-source-c-c-plus-plus-web-ide-using-php-and-javascript/master/Screenshot.png)
+![screenshot](https://github.com/me-sharif-hasan/SDK-9_The-open-source-c-c-plus-plus-web-ide-using-php-and-javascript/raw/master/Screenshotv2.2beta.png)
 ### Start from here!
 
 ### Requirements :
@@ -19,7 +19,6 @@
 ### This project is using ACE code editor for code editing feature . Thanks ACE team .
 
 Authors blog: https://iishanto.me
-<<<<<<< HEAD
 
 
 ### Version log:
@@ -27,5 +26,3 @@ Authors blog: https://iishanto.me
 	 1. Fixed toolbar.
 	 2. User friendly interface.
 	 3.Copy to clipboard feature.
-=======
->>>>>>> c3b3563a447d70c68004ad23b337aafa21c99c65
