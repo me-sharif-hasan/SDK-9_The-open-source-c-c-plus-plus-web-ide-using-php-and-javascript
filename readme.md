@@ -19,7 +19,6 @@
 ### This project is using ACE code editor for code editing feature . Thanks ACE team .
 
 Authors blog: https://iishanto.me
-<<<<<<< HEAD
 
 
 ### Version log:
