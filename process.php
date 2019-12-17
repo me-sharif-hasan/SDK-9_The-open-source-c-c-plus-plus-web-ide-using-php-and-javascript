@@ -34,42 +34,38 @@ fclose($f);
 
 
 function my_shell_exec($cmd, &$stdout=null, &$stderr=null) {
-    $proc = proc_open($cmd,[
-        1 => ['pipe','w'],
-        2 => ['pipe','w'],
-    ],$pipes);
+    $proc = proc_open($cmd,array(
+        1 => array('pipe','w'),
+        2 => array('pipe','w'),
+    ),$pipes);
     $stdout = stream_get_contents($pipes[1]);    
     fclose($pipes[1]);
     $stderr = stream_get_contents($pipes[2]);
     fclose($pipes[2]);
-    proc_close($proc);
-    return array($stderr,$stdout);
+    $rt = proc_close($proc);
+    return array($stderr,$stdout,$rt);
 }
 
-$e = my_shell_exec('g++ -g -o '.$name.' '.$source.'>error.log');
+$e = my_shell_exec('g++  -Wl,--stack,16777216 -std=c++11 -g -o '.$name.' '.$source.'>error.log');
 $flag = 0;
 $error="";
 if($e[0])
 {
 	$error =str_replace($source.":", "================================\n", $e[0]);
-	//echo("___________________________\n".date('M:d:Y H:i:s',time()));
 	$f=1;
 }
 $ts = microtime(true);
 $te=0;
 $responseData = "";
-
+$rt = 0;
 if(!$flag){
-$exe = __DIR__."\\".$name;
-$in = __DIR__."\\".$inputs;
-$out = __DIR__."\\".$out;
-//echo $out;
-exec("$exe < $in",$o,$e);
-//var_dump($e);
+$exe = __DIR__."/".$name;
+$in = __DIR__."/".$inputs;
+$out = __DIR__."/".$out;
+$o = my_shell_exec("$exe < $in");
+$rt = $o[2];
 $te= microtime(true);
-foreach ($o as $value) {
-	$responseData.="$value\n";
-}
+$responseData = $o[1];
 }
 $timeEnd = $te;
 
@@ -77,7 +73,7 @@ if($error!=NULL){
     $responseData = $error;
     $timeEnd = microtime(true);
 }
-$execution = "\n================================\nExecution time: ".number_format((float)($timeEnd-$ts)+.01, 2, '.', '')." Seconds\n";
+$execution = "\n================================\nExecution time: ".number_format((float)($timeEnd-$ts)+.01, 2, '.', '')." Seconds\nProcess return ".$rt.($rt<0?" [Runtime error].":" ");
 $output = json_encode(array("result"=>$responseData,"time"=>$execution));
 echo $output;
 ?>
