@@ -4,8 +4,8 @@
 
 ### Requirements :
 
-1.  PHP 7 or higher.
-2.  MinGW GCC compiler preinstalled in your system.
+1.  PHP 7 or higher with xampp/lampp.
+2.  g++/gcc,Java,Python,php preinstalled in your system.
 3.  Windows OS.
 
 ### How to install:
@@ -32,11 +32,12 @@ Authors blog: https://iishanto.me
 	 1. Fixed toolbar.
 	 2. User friendly interface.
 	 3.Copy to clipboard feature.
-   ##V3.0
-   1. Responsive layout
-   2. Flexible
-   3. More comfortable
-   4. Added Java,Php besides C,C++
-   5. Bug fix
+	 
+   	 ##v3.0
+   	 1. Responsive layout
+   	 2. Flexible
+   	 3. More comfortable
+   	 4. Added Java,Php besides C,C++
+   	 5. Bug fix
    
  **Todo:** Need a test in windows environment
