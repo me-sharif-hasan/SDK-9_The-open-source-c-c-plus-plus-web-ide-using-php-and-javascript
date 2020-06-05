@@ -47,7 +47,9 @@ $(window).keydown(function (e){
 	}
 });
 
-fullscreen_button.click(function(){toggleFullScreen($("#"+fullscreen_button.data("target"))[0]);});
+fullscreen_button.click(function(){
+	toggleFullScreen($("#"+fullscreen_button.data("target"))[0]);
+});
 window.onbeforeunload = function() { return "Dude, are you sure you want to leave? Think of the kittens!"; }
 
 

@@ -137,7 +137,7 @@
                                                         <label>Utility</label>
                                                         <a class="dropdown-item utility" id="save-button"><i style="color: #ff0078;" class="fa fa-star" aria-hidden="true"></i>Save</a>
                                                         <a class="dropdown-item utility" id="copy-button"><i style="color: #69348c;" class="fa fa-star" aria-hidden="true"></i>Copy</a>
-                                                        <a class="dropdown-item utility" id="fullscreen-button" data-target="full-screen"><i class="fa fa-expand" aria-hidden="true"></i>Extend</a>
+                                                        <a class="dropdown-item utility" id="fullscreen-button" data-target="full-screen"><i class="fa fa-expand" aria-hidden="true"></i>Toggle fullscreen</a>
 
                                                         <!--
                                                         <div class="level-item">
