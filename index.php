@@ -20,16 +20,6 @@
                     <div class="column is-full-tablet is-three-quarters-desktop">
                         <div class="columns is-centered">
                             <div class="column" id="full-screen">
-
-                                <!-- <div class="columns is-mobile" id="code-title-column">
-                                    <div class="column is-9-desktop is-three-quarters-tablet is-7-mobile">
-                                        <input class="input" type="text" id="save-title" placeholder="Enter a title...">
-                                    </div>
-                                    <div class="column">
-                                        <div class="dropdown is-right is-hoverable is-fullwidth" id="lang-dropdown"></div>
-                                    </div>
-                                </div> -->
-
                                 <div class="level is-mobile" id="code-tabs-level">
                                     <div class="level-left">
                                         <div class="level-item">
@@ -90,28 +80,6 @@
                                             </span>
                                             </button>
                                         </div>
-                                    <!--
-                                        <div class="level-item">
-                                            <button class="button is-link" id="save-button">
-                                            <span class="icon">
-                                            <i class="fa fa-file" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="is-hidden-mobile">
-                                            Save
-                                            </span>
-                                            </button>
-                                        </div>
-                                        <div class="level-item">
-                                            <button class="button is-util" id="copy-button">
-                                            <span class="icon">
-                                            <i class="fas fa-copy" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="is-hidden-mobile">
-                                            Copy
-                                            </span>
-                                            </button>
-                                        </div>
-                                    -->
                                         <div class="dropdown is-right is-hoverable is-fullwidth" id="lang-dropdown">
                                             <div class="dropdown-trigger is-fullwidth">
 
@@ -129,7 +97,7 @@
                                                         <label>Languages</label>
                                                         <a class="dropdown-item lang-select" data-lang="c" data-ckmode="c_cpp"><img src="resources/c_small.png" alt="">C</a>
                                                         <a class="dropdown-item lang-select" data-lang="cpp" data-ckmode="c_cpp"><img src="resources/cpp_small.png" alt="">C++</a>
-                                                        <a class="dropdown-item lang-select" data-lang="python" data-ckmode="python"><img src="resources/python_small.png" alt="">Python</a>
+                                                        <a class="dropdown-item lang-select" data-lang="python" data-ckmode="python" style="display: none;"><img src="resources/python_small.png" alt="">Python</a>
                                                         <a class="dropdown-item lang-select" data-lang="java" data-ckmode="java"><img src="resources/java_small.png" alt="">Java</a>
                                                         <a class="dropdown-item lang-select" data-lang="php" data-ckmode="php"><img src="resources/php_small.png" alt="">Php</a>
 
@@ -138,19 +106,6 @@
                                                         <a class="dropdown-item utility" id="save-button"><i style="color: #ff0078;" class="fa fa-star" aria-hidden="true"></i>Save</a>
                                                         <a class="dropdown-item utility" id="copy-button"><i style="color: #69348c;" class="fa fa-star" aria-hidden="true"></i>Copy</a>
                                                         <a class="dropdown-item utility" id="fullscreen-button" data-target="full-screen"><i class="fa fa-expand" aria-hidden="true"></i>Toggle fullscreen</a>
-
-                                                        <!--
-                                                        <div class="level-item">
-                                            <button class="button is-link" id="save-button">
-                                            <span class="icon">
-                                            <i class="fa fa-file" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="is-hidden-mobile">
-                                            Save
-                                            </span>
-                                            </button>
-                                        </div>-->
-
                                                     </div>
                                                 </div>
                                             </div>
