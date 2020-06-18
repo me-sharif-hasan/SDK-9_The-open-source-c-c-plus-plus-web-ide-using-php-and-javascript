@@ -152,7 +152,7 @@ function save(e){
 	var dfn="sdk9_save_file"+"."+$("#lang-select").data('ext');
 	var cfn=prompt('What will be your file name?', dfn);
 	if(cfn==null) return 0;
-	saveData($("#program").text(),dfn);
+	saveData($("#program").text(),cfn);
 }
 
 function saveData(data, fileName) {
