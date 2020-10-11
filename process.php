@@ -1,7 +1,9 @@
 <?php
+error_reporting(0);
 session_start();
 if($_SESSION['current_proc']!=null){
 	$rt=array("error"=>"You already have a running program. Click run again!");
+	$_SESSION['current_proc']=null;
 	echo json_encode($rt);
 	exit(1);
 }
